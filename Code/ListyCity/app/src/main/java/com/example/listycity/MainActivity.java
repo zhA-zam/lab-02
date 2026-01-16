@@ -86,10 +86,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 //view.setBackgroundColor(getResources().getColor(android.R.color.darker_gray));
+                String selectedCity = dataList.get(position);
                 deleteCityButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        dataList.remove(position);
+                        dataList.remove(selectedCity);
                         cityAdapter.notifyDataSetChanged();
                     }
                 });
